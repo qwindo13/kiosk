@@ -17,11 +17,30 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-white text-black h-screen overflow-x-hidden;
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  
+}
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
